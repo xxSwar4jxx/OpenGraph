@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens
+  -------------
+  Palette: cool "instrument paper" light mode, deep graphite-blue dark mode.
+  Accent: "plot ink" indigo-blue — the color of a pen plotter, not a UI-kit default.
+  Signature element: the equation color chips double as the accent source —
+  the UI itself stays neutral so the user's curves are always the most saturated
+  thing on screen.
+*/
+
+:root {
+  --surface: 40 20% 99%;           /* #FAFAF9-ish paper */
+  --surface-raised: 0 0% 100%;
+  --border: 220 14% 91%;
+  --ink: 222 20% 12%;
+  --ink-muted: 220 9% 42%;
+  --ink-faint: 220 9% 65%;
+  --accent: 228 89% 58%;           /* plot-ink indigo #3557F0 */
+  --accent-foreground: 0 0% 100%;
+
+  --grid-line: 220 14% 90%;
+  --grid-line-strong: 220 14% 80%;
+  --axis-line: 222 20% 20%;
+}
+
+.dark {
+  --surface: 222 24% 7%;           /* #0e1116-ish graphite */
+  --surface-raised: 222 22% 10%;
+  --border: 222 16% 18%;
+  --ink: 210 20% 96%;
+  --ink-muted: 216 12% 65%;
+  --ink-faint: 216 10% 42%;
+  --accent: 228 100% 68%;
+  --accent-foreground: 222 24% 7%;
+
+  --grid-line: 222 16% 16%;
+  --grid-line-strong: 222 16% 24%;
+  --axis-line: 210 20% 80%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(var(--surface));
+  color: hsl(var(--ink));
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: hsl(var(--accent) / 0.25);
+}
+
+/* Thin, quiet scrollbars for panels */
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--ink-faint) / 0.4);
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Visible keyboard focus everywhere (accessibility floor) */
+:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "graphing-calculator",
+  "name": "OpenGraph",
   "version": "0.1.0",
   "private": true,
   "description": "A premium, open-source graphing calculator web app — a spiritual successor to Desmos, built with Next.js.",

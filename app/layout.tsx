@@ -7,10 +7,10 @@ const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Plotly Calculator — graph functions, instantly",
+  title: "OpenGraph — graph functions, instantly",
   description:
     "A fast, open-source graphing calculator for functions, parametric curves, polar equations, implicit curves, inequalities, and sliders.",
-  applicationName: "Plotly Calculator",
+  applicationName: "OpenGraph",
 };
 
 export const viewport: NextViewport = {

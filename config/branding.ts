@@ -1,6 +1,6 @@
 export const branding = {
-  name: "Plotly Calculator",
-  shortName: "Plotly",
+  name: "OpenGraph",
+  shortName: "OpenGraph",
   tagline: "Graph functions, instantly.",
   description:
     "A fast, open-source graphing calculator for functions, parametric curves, polar equations, implicit curves, inequalities, and sliders.",

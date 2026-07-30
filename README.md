@@ -1,4 +1,4 @@
-# Plotly Calculator
+# OpenGraph
 
 An open-source graphing calculator — functions, parametric curves, polar
 equations, implicit curves, inequalities, sliders, a floating scientific

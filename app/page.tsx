@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { PanelLeftClose, PanelLeftOpen, Sigma } from "lucide-react";
 import { ExpressionList } from "@/components/expressions/ExpressionList";
 import { GraphCanvas } from "@/components/graph/GraphCanvas";
@@ -39,25 +38,35 @@ export default function Home() {
     </div>
     </div>
 
-    {/* Right */}
+    {/* Partnership */}
     <a
     href="https://nispax.in"
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex items-center gap-2 rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-3 py-1 transition-all duration-200 hover:border-[hsl(var(--accent))] hover:bg-[hsl(var(--surface-hover))]"
+    className="group flex items-center gap-2 rounded-md px-2 py-1 transition-colors hover:bg-white/5"
     >
-    <Image
-    src="/nispax-logo.png"
-    alt="NISPAX Infotech"
-    width={90}
-    height={22}
-    className="h-[22px] w-auto object-contain"
-    priority
-    />
+    <span className="text-[10px] uppercase tracking-[0.18em] text-[hsl(var(--muted-foreground))]">
+    Built in partnership with
+    </span>
 
-    <span className="text-xs text-[hsl(var(--muted-foreground))] group-hover:text-[hsl(var(--ink))]">
-    In partnership with{" "}
-    <span className="font-semibold">NISPAX Infotech</span>
+    <span
+    className="
+    text-sm
+    font-bold
+    tracking-wide
+    bg-gradient-to-r
+    from-orange-400
+    via-white
+    to-blue-400
+    bg-clip-text
+    text-transparent
+    "
+    >
+    NISPAX
+    </span>
+
+    <span className="text-xs font-medium text-[hsl(var(--muted-foreground))] group-hover:text-[hsl(var(--ink))] transition-colors">
+    Infotech
     </span>
     </a>
     </header>

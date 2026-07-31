@@ -24,7 +24,7 @@ export default function Home() {
         </IconButton>
         <div className="flex items-center gap-1.5 pl-1 text-[13.5px] font-medium">
           <Sigma size={16} className="text-[hsl(var(--accent))]" />
-          <span>Plotly Calculator</span>
+          <span>OpenGraph</span>
         </div>
       </header>
 
